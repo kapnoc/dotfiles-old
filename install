@@ -1,2 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
+echo '/-------------------\\'
+echo "| kapnoc's dotfiles |"
+echo '\\-------------------/'
