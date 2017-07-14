@@ -1,0 +1,147 @@
+!
+! ~/.Xresources
+!
+
+URxvt*geometry:         100x30
+
+! Fontconfig settings
+Xft.lcdfilter                :  lcddefault
+Xft.hintstyle                :  hintslight
+Xft.hinting                  :  1
+Xft.autohint                 :  1
+Xft.antialias                :  1
+Xft.dpi                      :  96
+Xft.rgba                     :  rgb
+
+! Font declaration
+!URxvt.font                   :  xft:Misc Tamsyn:pixelsize=14:autohint=true
+!URxvt.font                   :  xft:Monaco:pixelsize=12:autohint=true
+URxvt.font                   :  xft:Terminus:pixelsize=12:autohint=true
+!URxvt.boldFont               :  xft:Xos4 Terminus:pixelsize=14:autohint=true
+!URxvt.italicFont             :  xft:Xos4 Terminus:pixelsize=14:autohint=true
+!URxvt.font                   :  xft:Inconsolata:pixelsize=14:autohint=true
+!URxvt.boldFont               :  xft:Misc Tamsyn:pixelsize=14:autohint=true
+!URxvt.italicFont             :  xft:Misc Tamsyn:pixelsize=14:autohint=true
+
+! Disable scrollbar
+URxvt.scrollBar              :  false
+
+! Enable buffer
+URxvt.buffered               :  true
+
+! Enable url and mouseless text selection
+URxvt.perl-ext-common        :  default,url-select,keyboard-select
+URxvt.url-select.launcher    :  /usr/bin/xdg-open
+URxvt.url-select.underline   :  true
+URxvt.keysym.M-u             :  perl:url-select:select_next
+URxvt.keysym.M-Escape        :  perl:keyboard-select:activate
+URxvt.keysym.M-s             :  perl:keyboard-select:search
+
+! Color all underlined text
+URxvt.colorUL                :  #78A4FF
+
+! Allow large maximum line length
+URxvt*saveLines              :  65535
+
+! Enable cursor blinking
+URxvt*cursorBlink            :  true
+
+! Do not scroll with output
+URxvt*scrollTtyOutput        :  false
+
+! Scroll in relation to buffer
+URxvt*scrollWithBuffer       :  true
+
+! Scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress      :  true
+
+! Holo
+
+*background: #262626
+*foreground: #CCCCCC
+
+! Black
+*color0: #444444 
+*color8: #888888
+
+! Red
+*color1: #BF3E3E
+*color9: #FF5353
+
+! Green
+*color2: #98AB60
+*color10: #CBE580
+
+! Yellow
+*color3: #AB7260
+*color11: #E59980 
+
+! Blue
+*color4: #6099AC
+*color12: #80CCE6
+
+! Magenta
+*color5: #AB6099
+*color13: #E580CC
+
+! Cyan
+*color6: #80bab0
+*color14: #add9d1
+
+! White
+*color7: #F1F2F0
+*color15: #FFFFFF
+
+
+!! source: https://github.com/spazzpp2/dotfiles/blob/29819a5ac5e451bfa39bc324378aa508ef75cae8/Molokai.xrdb
+
+! Molokai theme
+URxvt*background: #101010
+URxvt*foreground: #d0d0d0
+URxvt*color0: #303030
+URxvt*color1: #a60020
+URxvt*color2: #66aa11
+URxvt*color3: #c47f2c
+URxvt*color4: #30309b
+URxvt*color5: #7e40a5
+URxvt*color6: #3579a8
+URxvt*color7: #9999aa
+URxvt*color8: #505050
+URxvt*color9: #ff0020
+URxvt*color10: #80ff00
+URxvt*color11: #ffba68
+URxvt*color12: #5f5fee
+URxvt*color13: #bb88dd
+URxvt*color14: #4eb4fa
+URxvt*color15: #d0d0d0
+
+! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
+! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
+! vim: ft=xdefaults
+
+URxvt*background: #111111
+URxvt*foreground: #C5C8C6
+! black
+URxvt*color0: #111111
+URxvt*color8: #373B41
+! red
+URxvt*color1: #A54242
+URxvt*color9: #CC6666
+! green
+URxvt*color2: #8C9440
+URxvt*color10: #B5BD68
+! yellow
+URxvt*color3: #DE935F
+URxvt*color11: #F0C674
+! blue
+URxvt*color4: #5F819D
+URxvt*color12: #81A2BE
+! magenta
+URxvt*color5: #85678F
+URxvt*color13: #B294BB
+! cyan
+URxvt*color6: #5E8D87
+URxvt*color14: #8ABEB7
+! white
+URxvt*color7: #707880
+URxvt*color15: #C5C8C6

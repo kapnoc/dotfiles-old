@@ -1,2 +1,57 @@
 #!/usr/bin/env bash
 
+@()
+{
+	(set -x ; "$@")
+	echo
+}
+
+echo
+echo '/-------------------\'
+echo "| kapnoc's dotfiles |"
+echo '\-------------------/'
+echo
+
+PKG="xbps-install"
+
+@ sudo $PKG -S
+
+################
+# needed tools #
+################
+@ sudo $PKG curl wget git
+
+source sh/vim.sh
+install_vim
+
+source sh/zsh.sh
+install_zsh
+
+
+################
+# urxvt config #
+################
+@ sudo $PKG rxvt-unicode
+@ cp files/.Xdefaults ~/
+
+
+# add Numix
+# add blih
+# add bin
+
+source sh/herbstluftwm.sh
+install_herbstluft
+
+####################
+# various packages #
+####################
+@ sudo $PKG nethack
+@ sudo $PKG gcc nasm
+@ sudo $PKG tree
+@ sudo $PKG neofetch
+@ sudo $PKG fortune-mod{,-void}
+@ sudo $PKG i3lock ImageMagick scrot ; mkdir -p ~/tmp
+
+echo
+echo "DONE :)"
+echo
