@@ -46,7 +46,7 @@ install_herbstluft
 # various packages #
 ####################
 @ sudo $PKG nethack
-@ sudo $PKG gcc nasm
+@ sudo $PKG gcc nasm make ncurses-devel
 @ sudo $PKG tree
 @ sudo $PKG neofetch
 @ sudo $PKG fortune-mod{,-void}
