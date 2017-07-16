@@ -38,7 +38,7 @@ if_up_strictness address
 pad_percents 2
 
 alignment top_left
-gap_x 162
+gap_x 170
 gap_y -2
 
 default_graph_size 8 20
