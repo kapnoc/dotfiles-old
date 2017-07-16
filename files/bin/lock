@@ -1,0 +1,2 @@
+#! /bin/bash
+scrot ~/tmp/lock.png && convert ~/tmp/lock.png -blur 0x3 ~/tmp/lockblur.png && i3lock -i ~/tmp/lockblur.png

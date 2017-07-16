@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 @()
 {
@@ -37,10 +37,16 @@ install_zsh
 
 # add Numix
 # add blih
-# add bin
 
 source sh/herbstluftwm.sh
 install_herbstluft
+
+#########
+# ~/bin #
+#########
+cp -r files/bin ~/
+git clone https://github.com/Bassintag551/EpitechCodeAnalyser ~/bin/EpitechCodeAnalyser
+ln -s ~/bin/EpitechCodeAnalyser/CodeAnalyser.py ~/bin/moumou
 
 ####################
 # various packages #

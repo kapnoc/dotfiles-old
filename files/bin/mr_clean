@@ -1,0 +1,10 @@
+#! /bin/sh
+
+cyan=$(tput setaf 6)
+green=$(tput setaf 2)
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+printf "%s\n" "${bold}${green}cc frer jte netoi ton pc${normal}"
+
+find . -name "#*#" -type f -delete -printf "${cyan}rm %p${normal}\n" -o -name "*~" -type f -delete -printf "${cyan}rm %p${normal}\n"
