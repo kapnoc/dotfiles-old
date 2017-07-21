@@ -1,5 +1,5 @@
 set number
-set relativenumber
+"set relativenumber
 set autoindent
 set cindent
 syntax on
@@ -8,6 +8,7 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 Plug 'w0ng/vim-hybrid'
+Plug 'kapnoc/vim-header'
 "Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'lilydjwg/colorizer'

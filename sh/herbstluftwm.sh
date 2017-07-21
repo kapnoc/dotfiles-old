@@ -4,7 +4,7 @@
 
 install_herbstluft()
 {
-	@ sudo $PKG herbstluftwm conky rofi trayer-srg xset dzen2 feh network-manager-applet
+	@ sudo $PKG herbstluftwm conky rofi trayer-srg xset dzen2 feh network-manager-applet xinput compton
 	@ mkdir -p ~/.config
 	@ cp -r files/herbstluftwm ~/.config/
 	@ cp -f files/Pictures ~/
