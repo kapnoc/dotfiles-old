@@ -20,6 +20,9 @@ Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()
 
+let g:epi_mode_auto = 1
+let g:epi_login = "kapnoc@memeware.net"
+
 map <C-x> :Vexplore<CR>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
