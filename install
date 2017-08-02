@@ -31,8 +31,9 @@ install_zsh
 ################
 # urxvt config #
 ################
-@ sudo $PKG rxvt-unicode
+@ sudo $PKG rxvt-unicode libcaca ranger
 @ cp files/.Xdefaults ~/
+@ cp files/ranger ~/.config -r
 
 
 # add Numix
