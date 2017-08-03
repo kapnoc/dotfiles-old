@@ -48,6 +48,8 @@ install_herbstluft
 cp -r files/bin ~/
 git clone https://github.com/Bassintag551/EpitechCodeAnalyser ~/bin/EpitechCodeAnalyser
 ln -s ~/bin/EpitechCodeAnalyser/CodeAnalyser.py ~/bin/moumou
+git clone https://github.com/kapnoc/todo-sh ~/bin/todo-sh
+ln -s ~/bin/todo-sh/todo ~/bin/todo
 
 ####################
 # various packages #
