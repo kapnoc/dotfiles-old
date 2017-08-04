@@ -120,6 +120,8 @@ alias aled-gcc="i686-elf-gcc"
 alias oskour="mr_clean ; make fclean"
 alias screenfetch="screenfetch -E"
 alias mm='make -j5'
+alias ccat='pygmentize -g -O style=colorful,linenos=1'
+
 #alias screenfetch="screenfetch -A Raspbian"
 echo
 fortune
