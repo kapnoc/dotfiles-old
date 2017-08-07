@@ -25,6 +25,7 @@ set autoindent
 set cindent
 syntax on
 filetype plugin indent on
+set foldmethod=marker
 
 " vim-header settings
 let g:epi_mode_auto = 1
