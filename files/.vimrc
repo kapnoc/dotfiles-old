@@ -26,6 +26,8 @@ set cindent
 syntax on
 filetype plugin indent on
 set foldmethod=marker
+set undofile
+set undodir=~/.vim/undodir
 
 " vim-header settings
 let g:epi_mode_auto = 1
