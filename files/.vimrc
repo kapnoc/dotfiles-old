@@ -25,6 +25,8 @@ set autoindent
 set cindent
 syntax on
 filetype plugin indent on
+set modeline
+set modelines=5
 set foldmethod=marker
 set undofile
 set undodir=~/.vim/undodir
