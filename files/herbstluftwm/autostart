@@ -178,7 +178,8 @@ xset -b
 nm-applet &
 
 /home/kapnoc/bin/run-once urxvtd
-/home/kapnoc/bin/run-once compton -c -S -C -b
+~/bin/run-once compton -c -C -b
+# -f --blur-background --blur-kern 3x3gaussian --opacity-rule "80:class_g = 'URxvt'"
 
 xinput --set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation' 1
 xinput --set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2
