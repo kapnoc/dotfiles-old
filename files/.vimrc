@@ -55,6 +55,10 @@ let g:netrw_winsize = 25
 colorscheme hybrid
 set background=dark
 
+" You will need a (stript/programm/link) that will allow you to
+" test what you are doing for this shortcut to work
+map <Leader>t :!./test<CR> 
+
 " show existing tab with 4 spaces width
 autocmd FileType javascript set tabstop=4
 " when indenting with '>', use 4 spaces width
