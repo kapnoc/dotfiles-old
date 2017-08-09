@@ -106,7 +106,7 @@ alias j='jobs'
 alias ne='emacs -nw'
 alias ee='peped'
 alias vv='vim-huge'
-#alias vv='vim'
+alias vv='nvim'
 
 alias dwarffortress='LD_PRELOAD=/usr/lib/libz.so.1 ~/df_linux/df'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"'
