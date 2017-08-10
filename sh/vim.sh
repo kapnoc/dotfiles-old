@@ -4,7 +4,7 @@
 
 install_vim()
 {
-	@ sudo $PKG vim vim-huge neovim
+	@ sudo $PKG vim vim-huge neovim neovim-qt
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	# add header.vim

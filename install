@@ -31,7 +31,7 @@ install_zsh
 ################
 # urxvt config #
 ################
-@ sudo $PKG rxvt-unicode libcaca ranger
+@ sudo $PKG rxvt-unicode libcaca ranger asciiqurium asciinema
 @ cp files/.Xdefaults ~/
 @ cp files/ranger ~/.config -r
 
