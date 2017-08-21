@@ -30,7 +30,7 @@ URxvt.scrollBar              :  false
 URxvt.buffered               :  true
 
 ! Enable url and mouseless text selection
-URxvt.perl-ext-common        :  default,url-select,keyboard-select
+URxvt.perl-ext-common        :  default,url-select,keyboard-select,resize-font
 URxvt.url-select.launcher    :  /usr/bin/xdg-open
 URxvt.url-select.underline   :  true
 URxvt.keysym.M-u             :  perl:url-select:select_next
