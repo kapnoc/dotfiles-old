@@ -20,7 +20,7 @@ call plug#end()
 
 " misc vim settings
 set number
-"set relativenumber
+set relativenumber
 set autoindent
 set cindent
 syntax on

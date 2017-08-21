@@ -32,7 +32,7 @@ install_zsh
 # urxvt config #
 ################
 @ cp files/.urxvt ~/
-@ sudo $PKG rxvt-unicode libcaca ranger
+@ sudo $PKG rxvt-unicode libcaca ranger asciiqurium asciinema
 @ cp files/.Xdefaults ~/
 @ cp files/ranger ~/.config -r
 
@@ -51,6 +51,9 @@ git clone https://github.com/Bassintag551/EpitechCodeAnalyser ~/bin/EpitechCodeA
 ln -s ~/bin/EpitechCodeAnalyser/CodeAnalyser.py ~/bin/moumou
 git clone https://github.com/kapnoc/todo-sh ~/bin/todo-sh
 ln -s ~/bin/todo-sh/todo ~/bin/todo
+
+
+echo "flat-volumes = no" | sudo tee -a /etc/pulse/daemon.conf
 
 ####################
 # various packages #
