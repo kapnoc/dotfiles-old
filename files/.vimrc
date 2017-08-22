@@ -1,5 +1,17 @@
+""
+"" ~/.vimrc for dotfiles
+""
+"" Made by Tanguy GEROME
+"" Login   <kapnoc@memeware.net>
+""
+"" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
+"" Last update Tue Aug 22 11:36:55 2017 Tanguy GEROME,,,
+""
+
 " Plug plugins list
 call plug#begin('~/.vim/plugged')
+
+Plug 'rhysd/vim-grammarous'
 
 Plug 'w0ng/vim-hybrid'
 Plug 'kapnoc/vim-header'
@@ -26,7 +38,6 @@ set cindent
 syntax on
 filetype plugin indent on
 set modeline
-set modelines=5
 set foldmethod=marker
 set undofile
 set undodir=~/.vim/undodir
@@ -55,10 +66,14 @@ let g:netrw_winsize = 25
 colorscheme hybrid
 set background=dark
 
-" You will need a (stript/programm/link) that will allow you to
+" You will need a (script/program/link) that will allow you to
 " test what you are doing for this shortcut to work
-map <Leader>t :!./test<CR> 
+"
+" The space at the end of line is here for nvim to properly refresh
+" the screen, do not remove
+nnoremap <silent> <Leader>t :!(./test &) > /dev/null<CR> 
 
+"	JS
 " show existing tab with 4 spaces width
 autocmd FileType javascript set tabstop=4
 " when indenting with '>', use 4 spaces width
