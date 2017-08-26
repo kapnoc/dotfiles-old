@@ -41,6 +41,8 @@ set modeline
 set foldmethod=marker
 set undofile
 set undodir=~/.vim/undodir
+set list
+set listchars=tab:>-
 
 " vim-header settings
 let g:epi_mode_auto = 1

@@ -89,7 +89,7 @@ export LANG=en_US.UTF-8
 #export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/heimdal/bin:/usr/heimdal/sbin:/home/kapnoc/bin:/usr/local/bin:/home/kapnoc/opt/cross/bin:/home/kapnoc/wps:/usr/local/texlive/2016/bin/x86_64-linux/"
 export PATH="/usr/local/bin/:/home/kapnoc/bin:$PATH"
 
-export EDITOR='vim'
+export EDITOR='nvim'
 #export TERM=rxvt-unicode-256color
 #export TERM=xterm-256color
 export PAGER='less'
@@ -105,6 +105,7 @@ alias j='jobs'
 #alias emacs='emacs -nw'
 alias ne='emacs -nw'
 alias ee='peped'
+alias ff='fug'
 alias vv='vim-huge'
 alias vv='nvim'
 
