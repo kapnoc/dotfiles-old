@@ -40,6 +40,9 @@ install_zsh
 # add Numix
 # add blih
 
+# add dwm
+cp files/.xinitrc ~
+
 source sh/herbstluftwm.sh
 install_herbstluft
 
