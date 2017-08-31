@@ -2,10 +2,10 @@
 "" ~/.vimrc for dotfiles
 ""
 "" Made by Tanguy GEROME
-"" Login   <kapnoc@memeware.net>
+""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Tue Aug 22 11:36:55 2017 Tanguy GEROME,,,
+"" Last update Thu Aug 31 10:47:44 2017 by Tanguy Gerome
 ""
 
 " Plug plugins list
@@ -45,8 +45,7 @@ set list
 set listchars=tab:>-
 
 " vim-header settings
-let g:epi_mode_auto = 1
-let g:epi_login = "kapnoc@memeware.net"
+let g:header_mail = "kapnoc@memeware.net"
 
 " NERDTree vim explorer settings
 map <C-x> :NERDTreeToggle<CR>
@@ -73,7 +72,10 @@ set background=dark
 "
 " The space at the end of line is here for nvim to properly refresh
 " the screen, do not remove
-nnoremap <silent> <Leader>t :!(./test &) > /dev/null<CR> 
+"nnoremap <Leader>t :silent exec "!./test > /dev/null &"<CR> 
+" This next line is MUCH BETTER (at least for me)
+nnoremap <Leader>t :call jobstart("./test")<CR>
+
 
 "	JS
 " show existing tab with 4 spaces width
