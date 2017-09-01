@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+LESSSH=`find /usr/share/nvim -name 'less.sh' || find /usr/share/vim -name 'less.sh'`
+"$LESSSH" -u /etc/vim/vimrc +'colorscheme desert' $@

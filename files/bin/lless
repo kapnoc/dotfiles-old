@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+pygmentize "$1" | less -RFX

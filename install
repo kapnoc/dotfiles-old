@@ -20,6 +20,7 @@ PKG="xbps-install"
 # needed tools #
 ################
 @ sudo $PKG curl wget git
+@ git config --global alias.llog "log --graph --color --oneline --decorate"
 
 source sh/vim.sh
 install_vim
