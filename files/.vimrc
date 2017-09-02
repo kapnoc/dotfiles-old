@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Thu Aug 31 10:47:44 2017 by Tanguy Gerome
+"" Last update Sat Sep 02 22:07:15 2017 Karl Toffel
 ""
 
 " Plug plugins list
@@ -43,6 +43,7 @@ set undofile
 set undodir=~/.vim/undodir
 set list
 set listchars=tab:>-
+setlocal colorcolumn=80
 
 " vim-header settings
 let g:header_mail = "kapnoc@memeware.net"
