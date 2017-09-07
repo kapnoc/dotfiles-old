@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Sat Sep 02 22:07:15 2017 Karl Toffel
+"" Last update Thu Sep 07 14:21:43 2017 Tanguy Gerome
 ""
 
 " Plug plugins list
@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-grammarous'
 
 Plug 'w0ng/vim-hybrid'
-Plug 'kapnoc/vim-header'
+Plug 'kapnoc/vim-project'
 "Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'lilydjwg/colorizer'
@@ -43,7 +43,7 @@ set undofile
 set undodir=~/.vim/undodir
 set list
 set listchars=tab:>-
-setlocal colorcolumn=80
+set colorcolumn=80
 
 " vim-header settings
 let g:header_mail = "kapnoc@memeware.net"
