@@ -27,6 +27,7 @@ install_vim
 
 source sh/zsh.sh
 install_zsh
+cp files/.bashrc ~
 
 
 ################
