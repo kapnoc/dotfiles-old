@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Thu Sep 07 14:21:43 2017 Tanguy Gerome
+"" Last update Tue Sep 19 16:37:45 2017 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -17,6 +17,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'kapnoc/vim-project'
 "Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-surround'
 Plug 'jlanzarotta/bufexplorer'
@@ -27,7 +28,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()
-
 
 
 " misc vim settings
@@ -47,9 +47,9 @@ set colorcolumn=80
 
 " vim-header settings
 let g:header_mail = "kapnoc@memeware.net"
+let g:header_name = "Tanguy Gérôme"
 
 " NERDTree vim explorer settings
-map <C-x> :NERDTreeToggle<CR>
 autocmd VimEnter * :NERDTree
 "autocmd BufRead * silent %bd | e# | Vexplore | wincmd w
 autocmd VimEnter * wincmd w
@@ -76,6 +76,12 @@ set background=dark
 "nnoremap <Leader>t :silent exec "!./test > /dev/null &"<CR> 
 " This next line is MUCH BETTER (at least for me)
 nnoremap <Leader>t :call jobstart("./test")<CR>
+
+
+" screw Ctrl
+nmap <Leader>x :NERDTreeToggle<CR>
+nmap <Leader>c :TagbarToggle<CR>
+nmap <Leader>w <C-w>
 
 
 "	JS
