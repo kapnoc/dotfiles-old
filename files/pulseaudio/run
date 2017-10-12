@@ -1,2 +1,2 @@
 #!/bin/sh
-exec pulseaudio --log-target syslog
+exec pulseaudio --start --log-target=syslog

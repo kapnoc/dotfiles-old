@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Tue Sep 19 16:37:45 2017 Tanguy Gérôme
+"" Last update Thu Oct 12 10:17:15 2017 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -24,7 +24,10 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-"js
+" fish
+Plug 'dag/vim-fish'
+
+" js
 Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()

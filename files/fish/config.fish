@@ -42,7 +42,7 @@ alias aled="startx -- vt1"
 alias aled-gcc="i686-elf-gcc"
 alias oskour="mr_clean ; make fclean"
 alias screenfetch="screenfetch -E"
-alias mm='make -j9'
+alias mm='make -j5'
 alias ccat='pygmentize -g -O style=colorful,linenos=1'
 
 fish_vi_key_bindings
@@ -52,6 +52,10 @@ set fish_cursor_default underscore
 set fish_cursor_insert underscore
 set fish_cursor_visual underscore
 
+function fish_greeting
+	fortune -o
+end
+
 function fish_mode_prompt
-  # NOOP - Disable vim mode indicator
+	# NOOP - Disable vim mode indicator
 end
