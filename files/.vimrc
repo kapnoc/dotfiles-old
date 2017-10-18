@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Thu Oct 12 10:17:15 2017 Tanguy Gérôme
+"" Last update Wed Oct 18 11:05:35 2017 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -23,11 +23,10 @@ Plug 'tpope/vim-surround'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'easymotion/vim-easymotion'
+Plug 'takac/vim-hardtime'
 
-" fish
-Plug 'dag/vim-fish'
-
-" js
+"js
 Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()
@@ -36,6 +35,8 @@ call plug#end()
 " misc vim settings
 set number
 set relativenumber
+set cursorcolumn
+set cursorline
 set autoindent
 set cindent
 syntax on
@@ -47,6 +48,7 @@ set undodir=~/.vim/undodir
 set list
 set listchars=tab:>-
 set colorcolumn=80
+set nohlsearch
 
 " vim-header settings
 let g:header_mail = "kapnoc@memeware.net"
@@ -94,3 +96,8 @@ autocmd FileType javascript set tabstop=4
 autocmd FileType javascript set shiftwidth=4
 " On pressing tab, insert 4 spaces
 autocmd FileType javascript set expandtab
+
+let g:hardtime_allow_different_key = 1
+"let g:hardtime_showmsg = 1
+let g:hardtime_maxcount = 3
+autocmd BufEnter * HardTimeOn
