@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Mon Nov 20 10:24:48 2017 Tanguy Gérôme
+"" Last update Thu Nov 30 14:24:12 2017 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -23,7 +23,20 @@ Plug 'lilydjwg/colorizer'
 "Plug 'jlanzarotta/bufexplorer'
 "Plug 'scrooloose/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'takac/vim-hardtime'
+"Plug 'takac/vim-hardtime'
+
+" completion
+if has('nvim')
+	Plug 'roxma/nvim-completion-manager'
+	Plug 'roxma/ncm-clang'
+	Plug 'fgrsnau/ncm-otherbuf'
+	Plug 'Shougo/neco-syntax'
+	Plug 'Shougo/neoinclude.vim'
+	Plug 'Shougo/neco-vim'
+	Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+endif
+
+
 
 "js
 Plug 'jelera/vim-javascript-syntax'
@@ -32,12 +45,14 @@ call plug#end()
 
 
 " misc vim settings
+set laststatus=0
 set number
 set relativenumber
 set cursorcolumn
 set cursorline
 set autoindent
 set cindent
+set complete=".,w,b,u,t,i"
 syntax on
 filetype plugin indent on
 set modeline
@@ -85,7 +100,7 @@ nnoremap <Leader>t :call jobstart("./test")<CR>
 " screw Ctrl
 "nmap <Leader>x :NERDTreeToggle<CR>
 nmap <Leader>x :Vexplore<CR>
-"nmap <Leader>c :TagbarToggle<CR>
+nmap <Leader>c :TagbarToggle<CR>
 nmap <Leader>w <C-w>
 
 
@@ -104,4 +119,4 @@ autocmd FileType javascript set expandtab
 let g:hardtime_allow_different_key = 1
 "let g:hardtime_showmsg = 1
 let g:hardtime_maxcount = 3
-autocmd BufEnter * HardTimeOn
+"autocmd BufEnter * HardTimeOn
