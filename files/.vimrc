@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Thu Nov 30 14:24:12 2017 Tanguy Gérôme
+"" Last update Wed Dec 13 15:31:41 2017 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -13,7 +13,10 @@ call plug#begin('~/.vim/plugged')
 
 "Plug 'rhysd/vim-grammarous'
 
+Plug 'sickill/vim-monokai'
+Plug 'sjl/badwolf'
 Plug 'w0ng/vim-hybrid'
+Plug 'justinmk/vim-syntax-extra'
 Plug 'kapnoc/vim-project'
 "Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
@@ -63,6 +66,7 @@ set list
 set listchars=tab:>-
 set colorcolumn=80
 set nohlsearch
+set wildmenu
 
 " vim-header settings
 let g:header_mail = "kapnoc@memeware.net"
@@ -86,6 +90,9 @@ let g:netrw_winsize = 25
 " colorscheme
 colorscheme hybrid
 set background=dark
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+
 
 " You will need a (script/program/link) that will allow you to
 " test what you are doing for this shortcut to work
@@ -104,6 +111,11 @@ nmap <Leader>c :TagbarToggle<CR>
 nmap <Leader>w <C-w>
 
 
+" highlight last inserted text
+nnoremap gV `[v`]
+
+inoremap <S-Tab> <esc>
+
 " Allow saving of files as sudo when you forgot to start vim using sudo
 cmap w!! w !sudo tee > /dev/null %
 
@@ -120,3 +132,6 @@ let g:hardtime_allow_different_key = 1
 "let g:hardtime_showmsg = 1
 let g:hardtime_maxcount = 3
 "autocmd BufEnter * HardTimeOn
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
