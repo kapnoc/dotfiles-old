@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Wed Dec 13 15:31:41 2017 Tanguy Gérôme
+"" Last update Wed Dec 13 16:22:40 2017 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -63,7 +63,7 @@ set foldmethod=marker
 set undofile
 set undodir=~/.vim/undodir
 set list
-set listchars=tab:>-
+set listchars=tab:\|·
 set colorcolumn=80
 set nohlsearch
 set wildmenu
