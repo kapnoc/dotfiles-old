@@ -110,3 +110,59 @@ done
 
 # Try to keep environment pollution down, EPA loves us.
 unset use_color sh
+
+set -o vi
+bind -m vi-insert "\C-l":clear-screen
+bind 'set completion-ignore-case on'
+bind 'set show-all-if-ambiguous on'
+
+stty -ixon
+
+
+
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/tanguy/bin:$PATH"
+
+
+export LESS_TERMCAP_mb=(printf '\e[01;31m') # enter blinking mode
+export LESS_TERMCAP_md=(printf '\e[01;38;5;75m') # enter double-bright mode
+export LESS_TERMCAP_me=(printf '\e[0m') # turn off all appearance modes (mb, md, so, us)
+export LESS_TERMCAP_se=(printf '\e[0m') # leave standout mode
+export LESS_TERMCAP_so=(printf '\e[01;33m') # enter standout mode
+export LESS_TERMCAP_ue=(printf '\e[0m') # leave underline mode
+export LESS_TERMCAP_us=(printf '\e[04;38;5;200m') # enter underline mode
+
+export EDITOR='nvim'
+#export TERM=rxvt-unicode-256color
+#export TERM=xterm-256color
+#export PAGER='less'
+export PAGER='less -R'
+export PANEL_FIFO='/tmp/panel-fifo'
+
+alias ..='cd ..'
+alias ls='ls --color=always'
+alias tree='tree -C'
+alias ll='ls -l'
+alias la='ls -la'
+alias j='jobs'
+#alias emacs='emacs -nw'
+alias ne='emacs -nw'
+alias ee='peped'
+alias ff='fug'
+alias vv='vim-huge'
+alias vv='nvim'
+
+alias dwarffortress='LD_PRELOAD=/usr/lib/libz.so.1 ~/df_linux/df'
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"'
+#alias lock="xlock -mode swirl -count 200"
+#alias lock="scrot ~/tmp/lock.png ; convert ~/tmp/lock.png -blur 0x3 ~/tmp/lockblur.png ; i3lock -i ~/tmp/lockblur.png"
+#alias lck="xlock -mode rain"
+#alias lck="i3lock -i ~/Pictures/Wallpapers/wallpaper2.png"
+alias susp="sudo s2ram ; lck"
+alias aled="startx -- vt1"
+alias aled-gcc="i686-elf-gcc"
+alias oskour="mr_clean ; make fclean"
+alias screenfetch="screenfetch -E"
+alias mm='make -j9'
+alias ccat='pygmentize -g -O style=colorful,linenos=1'
+
+
