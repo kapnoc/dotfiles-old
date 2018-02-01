@@ -4,7 +4,7 @@
 setxkbmap us_intl
 blueman-applet &
 nm-applet &
-compton -b --config ~/.comptonrc
+compton -b --xrender-sync-fence --config ~/.config/compton.conf
 /home/tanguy/bin/aled-flux
 feh --bg-center /home/tanguy/Pictures/Wallpapers/wallpaper2.png
 xset -b
@@ -13,8 +13,9 @@ xset -b
 #exec bspwm
 #exec startxfce4
 #compton -c -b
+#xrandr --output DP2 --mode 1920x1080 --right-of eDP1
 slstatus &
-exec dwm
+ssh-agent dwm
 #exec ck-launch-session dbus-launch xfce4-session
 #exec ck-launch-session dbus-launch awesome
 #exec ck-launch-session dbus-launch startkde
