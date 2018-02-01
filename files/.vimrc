@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Wed Dec 13 16:39:12 2017 Tanguy Gérôme
+"" Last update Tue Jan 16 16:31:28 2018 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -54,9 +54,14 @@ set relativenumber
 set cursorcolumn
 set cursorline
 set autoindent
+set noexpandtab
 set cindent
+set tabstop=8
+set shiftwidth=8
+set softtabstop=-1
+set copyindent
 set complete=".,w,b,u,t,i"
-syntax on
+"syntax on
 filetype plugin indent on
 set modeline
 set foldmethod=marker
