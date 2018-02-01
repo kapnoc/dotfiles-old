@@ -12,6 +12,7 @@ install_vim()
 	@ mkdir -p ~/.vim/undodir
 	ln -s ~/.vim ~/.config/nvim
 	ln -s ~/.vimrc ~/.config/nvim/init.vim
+	cp files/ginit.vim ~/.config/nvim/ginit.vim
 	echo "vim installed"
 	echo
 }
