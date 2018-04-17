@@ -1,3 +1,2 @@
 #! /bin/bash
-#scrot ~/tmp/lock.png && convert ~/tmp/lock.png -scale 5% -scale 2000% ~/tmp/lockpix.png && i3lock -i ~/tmp/lockpix.png
-scrot ~/tmp/lock.png && convert ~/tmp/lock.png -scale 7% -scale 1422% ~/tmp/lockpix.png && i3lock -i ~/tmp/lockpix.png
+scrot ~/tmp/lock.png && convert ~/tmp/lock.png -scale 5% -scale 2000% ~/tmp/lockpix.png && i3lock -i ~/tmp/lockpix.png

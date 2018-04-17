@@ -1,9 +1,0 @@
-#!/bin/bash
-
-#check if xflux is running
-if pgrep redshift >/dev/null 2>&1
-  then
-     return 0
-  else
-     redshift -l 48:15 &
-fi

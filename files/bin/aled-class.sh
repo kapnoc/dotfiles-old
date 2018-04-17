@@ -31,5 +31,5 @@ echo "$1::~$1()" >> "$1.cpp"
 echo "{" >> "$1.cpp"
 echo "}" >> "$1.cpp"
 
-mv "$1.hpp" "inc/"
-mv "$1.cpp" "inc/"
+#mv "$1.hpp" "inc/"
+#mv "$1.cpp" "src/"

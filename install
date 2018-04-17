@@ -25,28 +25,23 @@ PKG="xbps-install"
 source sh/vim.sh
 install_vim
 
-source sh/zsh.sh
-install_zsh
-cp files/.bashrc ~
-
-
-################
-# urxvt config #
-################
-@ sudo $PKG tabbed rxvt-unicode libcaca ranger asciiquarium asciinema
-@ cp files/.urxvt ~/ -r
-@ cp files/.Xdefaults ~/
-@ cp files/ranger ~/.config -r
-
-
+#source sh/zsh.sh
+#install_zsh
+#cp files/.bashrc ~
+#################
+## urxvt config #
+#################
+#@ sudo $PKG tabbed rxvt-unicode libcaca ranger asciiquarium asciinema
+#@ cp files/.urxvt ~/ -r
+#@ cp files/.Xdefaults ~/
+#@ cp files/ranger ~/.config -r
 # add Numix
 # add blih
-
 # add dwm
-cp files/.xinitrc ~
+#source sh/herbstluftwm.sh
+#install_herbstluft
 
-source sh/herbstluftwm.sh
-install_herbstluft
+cp files/.xinitrc ~
 
 #########
 # ~/bin #
@@ -54,8 +49,8 @@ install_herbstluft
 cp -r files/bin ~/
 git clone https://github.com/Bassintag551/EpitechCodeAnalyser ~/bin/EpitechCodeAnalyser
 ln -s ~/bin/EpitechCodeAnalyser/CodeAnalyser.py ~/bin/moumou
-git clone https://github.com/kapnoc/todo-sh ~/bin/todo-sh
-ln -s ~/bin/todo-sh/todo ~/bin/todo
+#git clone https://github.com/kapnoc/todo-sh ~/bin/todo-sh
+#ln -s ~/bin/todo-sh/todo ~/bin/todo
 
 
 echo "flat-volumes = no" | sudo tee -a /etc/pulse/daemon.conf
