@@ -22,6 +22,8 @@ PKG="xbps-install"
 @ sudo $PKG curl wget git
 @ git config --global alias.llog "log --graph --color --oneline --decorate"
 
+source sh/bspwm.sh
+install_bspwm
 source sh/vim.sh
 install_vim
 
@@ -40,6 +42,9 @@ install_vim
 # add dwm
 #source sh/herbstluftwm.sh
 #install_herbstluft
+
+cp files/.mkshrc ~
+touch ~/.ksh_history
 
 cp files/.xinitrc ~
 

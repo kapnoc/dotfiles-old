@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Tue Jan 16 16:31:28 2018 Tanguy Gérôme
+"" Last update Tue Apr 17 16:42:40 2018 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -13,8 +13,8 @@ call plug#begin('~/.vim/plugged')
 
 "Plug 'rhysd/vim-grammarous'
 
-Plug 'sickill/vim-monokai'
-Plug 'sjl/badwolf'
+"Plug 'sickill/vim-monokai'
+"Plug 'sjl/badwolf'
 Plug 'w0ng/vim-hybrid'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'kapnoc/vim-project'
@@ -26,7 +26,7 @@ Plug 'lilydjwg/colorizer'
 "Plug 'jlanzarotta/bufexplorer'
 "Plug 'scrooloose/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'takac/vim-hardtime'
+Plug 'takac/vim-hardtime'
 
 " completion
 if has('nvim')
@@ -103,11 +103,6 @@ highlight NonText ctermbg=none
 
 " You will need a (script/program/link) that will allow you to
 " test what you are doing for this shortcut to work
-"
-" The space at the end of line is here for nvim to properly refresh
-" the screen, do not remove
-"nnoremap <Leader>t :silent exec "!./test > /dev/null &"<CR> 
-" This next line is MUCH BETTER (at least for me)
 nnoremap <Leader>t :call jobstart("./test")<CR>
 
 
@@ -138,7 +133,9 @@ autocmd FileType javascript set expandtab
 let g:hardtime_allow_different_key = 1
 "let g:hardtime_showmsg = 1
 let g:hardtime_maxcount = 3
-"autocmd BufEnter * HardTimeOn
+autocmd BufEnter * HardTimeOn
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+autocmd BufNewFile,BufReadPost *.scm set lisp
+autocmd BufNewFile,BufReadPost *.scm set expandtab

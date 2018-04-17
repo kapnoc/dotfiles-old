@@ -4,7 +4,7 @@
 
 install_vim()
 {
-	@ sudo $PKG neovim neovim-qt
+	@ sudo $PKG neovim neovim-qt xsel
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@ cp files/.vimrc ~/
