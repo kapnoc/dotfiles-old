@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Tue Apr 17 16:42:40 2018 Tanguy Gérôme
+"" Last update Sat Apr 21 12:52:53 2018 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -133,9 +133,48 @@ autocmd FileType javascript set expandtab
 let g:hardtime_allow_different_key = 1
 "let g:hardtime_showmsg = 1
 let g:hardtime_maxcount = 3
-autocmd BufEnter * HardTimeOn
+"autocmd BufEnter * HardTimeOn
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 autocmd BufNewFile,BufReadPost *.scm set lisp
 autocmd BufNewFile,BufReadPost *.scm set expandtab
+
+
+inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+vnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+map <Space><Space> <Esc>/<++><Enter>"_c4l
+inoremap <C-l> <Space><Space>
+
+
+" C
+
+autocmd FileType c inoremap ;fn (<++>)<CR>{<CR><++><CR>}<Esc>3k0i
+autocmd FileType c inoremap ;sfn (<++>);<Esc>0i
+autocmd FileType c inoremap ;if if () {<CR><++><CR>}<Esc>2k0f)i
+autocmd FileType c inoremap ;sif if ()<CR><++><Esc>k0f)i
+autocmd FileType c inoremap ;eif else if () {<CR><++><CR>}<Esc>2k0f)i
+autocmd FileType c inoremap ;seif else if ()<CR><++><Esc>k0f)i
+autocmd FileType c inoremap ;el else {<CR><++><CR>}<Esc>kcc
+autocmd FileType c inoremap ;sel else <CR>
+autocmd FileType c inoremap ;fo for () {<CR><++><CR>}<Esc>2k0f)i
+autocmd FileType c inoremap ;sfo for ()<CR><++><Esc>k0f)i
+autocmd FileType c inoremap ;wh while () {<CR><++><CR>}<Esc>2k0f)i
+autocmd FileType c inoremap ;swh while ()<CR><++><Esc>k0f)i
+autocmd FileType c inoremap ;bl . (<++>) {<CR><++><CR>}<Esc>2k^s
+autocmd FileType c inoremap ;sbl . (<++>)<CR><++><Esc>k^s
+
+autocmd FileType c inoremap ;st typedef struct . {<CR><++><CR>} <++>;<Esc>2kf.s
+
+
+
+" Python
+
+autocmd FileType python inoremap ;fn def (<++>):<CR><++><Esc>k0f(i
+autocmd FileType python inoremap ;if if :<CR><++><Esc>k0f:i
+autocmd FileType python inoremap ;eif elif :<CR><++><Esc>k0f:i
+autocmd FileType python inoremap ;el else:<CR>
+autocmd FileType python inoremap ;fo for :<CR><++><Esc>k0f:i
+autocmd FileType python inoremap ;wh while :<CR><++><Esc>k0f:i
+autocmd FileType python inoremap ;tr try:<CR>.<CR>.<Esc>4Xsexcept <++>:<CR><++><Esc>2kcc
+autocmd FileType python inoremap ;bl :<CR><++><Esc>k0f:i
