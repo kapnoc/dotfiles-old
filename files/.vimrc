@@ -5,7 +5,7 @@
 ""         <kapnoc@memeware.net>
 ""
 "" Started on  Tue Aug 22 11:34:28 2017 Tanguy GEROME
-"" Last update Sat Apr 21 12:52:53 2018 Tanguy Gérôme
+"" Last update Tue Apr 24 13:53:33 2018 Tanguy Gérôme
 ""
 
 " Plug plugins list
@@ -141,10 +141,23 @@ autocmd BufNewFile,BufReadPost *.scm set lisp
 autocmd BufNewFile,BufReadPost *.scm set expandtab
 
 
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
+inoremap < <><Esc>i
+
+
+
+"""""""""""""""""""""
+" Start of snippets "
+
 inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 vnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 map <Space><Space> <Esc>/<++><Enter>"_c4l
 inoremap <C-l> <Space><Space>
+
 
 
 " C
