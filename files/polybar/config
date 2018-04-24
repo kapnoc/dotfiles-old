@@ -66,12 +66,41 @@ type = internal/memory
 interval = 1.0
 label = "RAM %gb_used% / %gb_total%"
 
+[module/swap]
+type = internal/memory
+interval = 1.0
+label = "SWAP %gb_swap_used% / %gb_swap_total%"
+
+[module/pulseaudio]
+type = internal/pulseaudio
+label-volume = VOL %percentage%%
+
+[module/volume]
+type = internal/volume
+label-volume = VOL %percentage%%
+label-muted = VOL MUTED
+mapped = true
+
+[module/backlight]
+type = internal/xbacklight
+label = :sun_with_face: %percentage%%
+;🌞
+
+[module/temperature]
+type = internal/temperature
+label = TEMP %temperature-c%
+label-warn = TEMP %temperature-c%
+label-warn-foreground = #f00
+
 [module/filesystem]
 type = internal/fs
 mount-0 = /
 mount-1 = /home
 fixed-values = true
 label-mounted = %mountpoint%: %percentage_used%% of %total%
+
+[module/title]
+type = internal/xwindow
 
 [bar/main_bar]
 locale = en_US.UTF-8
@@ -97,6 +126,6 @@ separator = " | "
 fixed-center = false
 tray-position = right
 
-modules-left = bspwm
+modules-left = bspwm title
 modules-center = date
-modules-right = cpu memory filesystem battery
+modules-right = cpu memory filesystem backlight volume temperature battery
