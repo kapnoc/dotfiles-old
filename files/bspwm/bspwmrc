@@ -23,7 +23,8 @@ xrdb ~/.extend.Xresources
 nitrogen --restore
 run-once redshift -l 48:15
 xset -b
-setxkbmap us_intl
+#setxkbmap us_intl
+setxkbmap -option compose:ralt
 /usr/bin/pulseaudio --start --log-target=syslog &
 #feh --bg-center ~/Pictures/Wallpapers/wallpaper2.png
 hsetroot -solid "#111111"
